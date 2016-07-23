@@ -18,21 +18,41 @@ public class CalcuPost implements I_Calculadora
 			}
 			else
 			{
+				/*if(i==' ')
+				{
+					
+				}*/
 				if(i=='+')
 				{
-					resultado= MiPila.pop()+MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= a + b;
+					MiPila.push(resultado);
+					string = string + "Suma: "+ a + "+" + b + "=" + resultado + "\n";
 				}
 				if(i=='-')
 				{
-					resultado= MiPila.pop()-MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= b - a;
+					MiPila.push(resultado);
+					string = string + "Resta: "+ b + "-" + a + "=" + resultado + "\n";
 				}
 				if(i=='*')
 				{
-					resultado= MiPila.pop()*MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= b * a;
+					MiPila.push(resultado);
+					string = string + "Multiplicacion: "+ b + "*" + a + "=" + resultado + "\n";
 				}
 				if(i=='/')
 				{
-					resultado= MiPila.pop()/MiPila.pop();
+					int b= MiPila.pop();
+					int a= MiPila.pop();
+					resultado= a/b;
+					MiPila.push(resultado);
+					string = string + "Division: "+ a + "/" + b + "=" + resultado + "\n";
 				}
 			}
 		}
