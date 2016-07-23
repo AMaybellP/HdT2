@@ -93,5 +93,10 @@ public class CalcuPost implements I_Calculadora
         }
         return null;
     }
+    
+    public String toString()
+	{
+		return string;
+	}
 
 }
