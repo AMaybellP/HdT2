@@ -4,18 +4,6 @@ public class CalcuPost implements I_Calculadora
 	Stack<Integer> MiPila= new Stack<>();
 	int resultado= 0;
 	String string= " ";
-	/*public void prueba()
-	{
-		String cadena= "1234 ja* /+-";
-		char[] cadena2= cadena.toCharArray();
-		
-		//int  i;
-		for(char i: cadena2)
-		{
-			int num= Character.getNumericValue(i);
-			System.out.println(num);
-		}
-	}*/
 
 	@Override
 	public int Calcular(String vector) {
@@ -36,24 +24,39 @@ public class CalcuPost implements I_Calculadora
 				}*/
 				if(i=='+')
 				{
-					resultado= MiPila.pop()+MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= a + b;
+					MiPila.push(resultado);
+					string = string + "Suma: "+ a + "+" + b + "=" + resultado + "\n";
 				}
 				if(i=='-')
 				{
-					resultado= MiPila.pop()-MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= b - a;
+					MiPila.push(resultado);
+					string = string + "Resta: "+ b + "-" + a + "=" + resultado + "\n";
 				}
 				if(i=='*')
 				{
-					resultado= MiPila.pop()*MiPila.pop();
+					int a= MiPila.pop();
+					int b= MiPila.pop();
+					resultado= b * a;
+					MiPila.push(resultado);
+					string = string + "Multiplicacion: "+ b + "*" + a + "=" + resultado + "\n";
 				}
 				if(i=='/')
 				{
-					resultado= MiPila.pop()/MiPila.pop();
+					int b= MiPila.pop();
+					int a= MiPila.pop();
+					resultado= a/b;
+					MiPila.push(resultado);
+					string = string + "Division: "+ a + "/" + b + "=" + resultado + "\n";
 				}
 			}
 		}
 		return resultado;
-	}
 
 	@Override
 	
@@ -89,5 +92,11 @@ public class CalcuPost implements I_Calculadora
         }
        
     }
+    
+    public String toString()
+	{
+		return string;
+	}
+
 
 }
