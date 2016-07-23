@@ -4,19 +4,7 @@ public class CalcuPost implements I_Calculadora
 	Stack<Integer> MiPila= new Stack<>();
 	int resultado= 0;
 	String string= " ";
-	/*public void prueba()
-	{
-		String cadena= "1234 ja* /+-";
-		char[] cadena2= cadena.toCharArray();
-		
-		//int  i;
-		for(char i: cadena2)
-		{
-			int num= Character.getNumericValue(i);
-			System.out.println(num);
-		}
-	}*/
-
+	
 	@Override
 	public int Calcular(String vector) {
 		// TODO Auto-generated method stub
@@ -30,10 +18,6 @@ public class CalcuPost implements I_Calculadora
 			}
 			else
 			{
-				/*if(i==' ')
-				{
-					
-				}*/
 				if(i=='+')
 				{
 					resultado= MiPila.pop()+MiPila.pop();
