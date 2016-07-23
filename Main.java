@@ -4,9 +4,10 @@ public class Main {
 	public static void main(String []args)
 	{
 		CalcuPost calcu= new CalcuPost();
-		String cadena= "2 4 +";
+		String cadena= "8 2 /";
 		
-		System.out.println(calcu.Calcular(cadena));
+		calcu.Calcular(cadena);
+		System.out.println(calcu.toString());
 	}
 
 	
