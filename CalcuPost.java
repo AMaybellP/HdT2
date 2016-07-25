@@ -1,3 +1,5 @@
+//Se importa java.io para poder leer el archivo 
+import java.io.*;
 
 //Clase que implementa la interfaz de la calculadora
 public class CalcuPost implements I_Calculadora
@@ -6,7 +8,8 @@ public class CalcuPost implements I_Calculadora
 	Stack<Integer> MiPila= new Stack<>();
 	int resultado= 0;
 	String string= " ";
-
+	String direccion = "datos.txt";
+	
 	@Override
 	public int Calcular(String vector) {
 		// TODO Auto-generated method stub
@@ -68,24 +71,17 @@ public class CalcuPost implements I_Calculadora
 	
 	//Metodo que lee un txt y devuelve un string con lo escrito dentro
 	public String LeerArchivo(String direccion) {
-	 // Se abre el documento 
-        String direccion = "";
-	String vector;
         // Leer una linea a la vez 
         String line = null;
 
         try {
             // FileReader lee el texto 
-            FileReader fileReader = 
-                new FileReader(direccion);
+            FileReader fileReader = new FileReader(direccion);
 
-            
-            BufferedReader bufferedReader = 
-                new BufferedReader(fileReader);
+            BufferedReader bufferedReader =  new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) {
-                vector = line;
-                return vector;
+                return line;
             }   
 
             // Cerrar el texto 
