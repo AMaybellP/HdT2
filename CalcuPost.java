@@ -8,7 +8,7 @@ public class CalcuPost implements I_Calculadora
 	Stack<Integer> MiPila= new Stack<>();
 	int resultado= 0;
 	String string= " ";
-	String direccion = "datos.txt";
+	String direccion = "Nombre_del_Archivo.txt";
 	
 	@Override
 	public int Calcular(String vector) {
@@ -66,8 +66,8 @@ public class CalcuPost implements I_Calculadora
 			}
 		}
 		return resultado;
+	}
 
-	@Override
 	
 	//Metodo que lee un txt y devuelve un string con lo escrito dentro
 	public String LeerArchivo(String direccion) {
@@ -94,6 +94,7 @@ public class CalcuPost implements I_Calculadora
                 + direccion + "'");                  
         
         }
+        return line;
        
     }
     
