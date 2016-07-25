@@ -62,7 +62,7 @@ public class CalcuPost implements I_Calculadora
 	
 	public String LeerArchivo(String direccion) {
 	 // Se abre el documento 
-        String fileName = "canastadefrutas2.txt";
+        String direccion = "";
 	String vector;
         // Leer una linea a la vez 
         String line = null;
@@ -70,7 +70,7 @@ public class CalcuPost implements I_Calculadora
         try {
             // FileReader lee el texto 
             FileReader fileReader = 
-                new FileReader(fileName);
+                new FileReader(direccion);
 
             
             BufferedReader bufferedReader = 
@@ -87,7 +87,7 @@ public class CalcuPost implements I_Calculadora
         catch(IOException ex) {
             System.out.println(
                 "No se pudo leer el archivo '" 
-                + fileName + "'");                  
+                + direccion + "'");                  
         
         }
        
