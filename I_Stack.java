@@ -1,4 +1,4 @@
-
+//Interfaz del Stack 
 public interface I_Stack <E>
 {
 	public void push(E element);

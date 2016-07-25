@@ -1,4 +1,4 @@
-
+//Interfaz de la calculadora
 public interface I_Calculadora 
 {
 	public int Calcular (String vector);

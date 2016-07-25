@@ -1,6 +1,8 @@
 
+//Clase que implementa la interfaz de la calculadora
 public class CalcuPost implements I_Calculadora
 {
+	//Instancia del stack y variables
 	Stack<Integer> MiPila= new Stack<>();
 	int resultado= 0;
 	String string= " ";
@@ -11,12 +13,16 @@ public class CalcuPost implements I_Calculadora
 		char[] cadena= vector.toCharArray();
 		for (char i: cadena)
 		{
+			//Verificar si es un numero 
 			int num= Character.getNumericValue(i);
+
+			//Si es un numero, se hace un push
 			if(num>=0)
 			{
 				MiPila.push(num);
 			}
 			else
+			//Si es un signo, dependiendo de la jerarquia realiza las operaciones
 			{
 				/*if(i==' ')
 				{
@@ -60,6 +66,7 @@ public class CalcuPost implements I_Calculadora
 
 	@Override
 	
+	//Metodo que lee un txt y devuelve un string con lo escrito dentro
 	public String LeerArchivo(String direccion) {
 	 // Se abre el documento 
         String direccion = "";
