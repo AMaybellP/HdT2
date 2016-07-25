@@ -78,6 +78,7 @@ public class CalcuPost implements I_Calculadora
 
             while((line = bufferedReader.readLine()) != null) {
                 vector = line;
+                return vector;
             }   
 
             // Cerrar el texto 
