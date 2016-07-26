@@ -10,7 +10,6 @@ public class CalcuPost implements I_Calculadora
 	String string= " ";
 	String direccion = "Nombre_del_Archivo.txt";
 	
-	@Override
 	public int Calcular(String vector) {
 		// TODO Auto-generated method stub
 		char[] cadena= vector.toCharArray();
